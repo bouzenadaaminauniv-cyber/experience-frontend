@@ -152,12 +152,12 @@ export default function CoverPage() {
             <th colSpan={4} style={{ fontSize: '8px' }}>Type of Activity</th>
           </tr>
           <tr className="col-label-row">
-            {['Date','Location','A/C or Comp. Type','A/C Reg. or Comp. PN / SN',
-              'Type of Maintenance (Rating)','Privilege Used',
-              'FOT','SGH','R/I','MEL','TS','MOD','REP','INSP',
-              'Training','Perform','Supervise','CRS',
-              'A T A','Operation Performed','Time Duration',
-              'Maintenance record Ref.','Remarks']
+            {['Date', 'Location', 'A/C or Comp. Type', 'A/C Reg. or Comp. PN / SN',
+              'Type of Maintenance (Rating)', 'Privilege Used',
+              'FOT', 'SGH', 'R/I', 'MEL', 'TS', 'MOD', 'REP', 'INSP',
+              'Training', 'Perform', 'Supervise', 'CRS',
+              'A T A', 'Operation Performed', 'Time Duration',
+              'Maintenance record Ref.', 'Remarks']
               .map(l => <th key={l}><span className="col-label">{l}</span></th>)}
           </tr>
         </thead>
@@ -262,7 +262,7 @@ export default function CoverPage() {
         <button
           className="btn-primary"
           style={{ background: '#dc2626' }}
-          onClick={() => window.open(`http://localhost:3001/api/export/carnet/${profile?.id}/pdf`, '_blank')}
+          onClick={() => window.open(`${import.meta.env.VITE_API_URL}/api/export/carnet/${profile?.id}/pdf`, '_blank')}
         >
           ⬇ Exporter tout le carnet (PDF)
         </button>

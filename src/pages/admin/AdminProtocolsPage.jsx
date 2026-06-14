@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import '../admin/AdminUsersPage.css'
 import './AdminProtocolsPage.css'
 
-const API = 'http://localhost:3001/api/protocols'
+const API = '${import.meta.env.VITE_API_URL}/api/protocols'
 
 const PROTOCOL_TYPES = [
   { value: 'daily', label: 'Daily' },

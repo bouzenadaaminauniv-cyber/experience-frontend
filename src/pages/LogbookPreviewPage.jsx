@@ -51,11 +51,11 @@ export default function LogbookPreviewPage() {
                 <span className="preview-title">Aperçu — {aircraft} {PROTOCOL_LABELS[protocol?.protocol_type]}</span>
                 <div style={{ display: 'flex', gap: '8px' }}>
                     <button className="btn-primary" style={{ background: '#dc2626' }}
-                        onClick={() => window.open(`http://localhost:3001/api/export/entry/${entryId}/pdf`, '_blank')}>
+                        onClick={() => window.open(`${import.meta.env.VITE_API_URL}/api/export/entry/${entryId}/pdf`, '_blank')}>
                         ⬇ PDF
                     </button>
                     <button className="btn-primary"
-                        onClick={() => window.open(`http://localhost:3001/api/export/entry/${entryId}`, '_blank')}>
+                        onClick={() => window.open(`${import.meta.env.VITE_API_URL}/api/export/entry/${entryId}`, '_blank')}>
                         ⬇ Word
                     </button>
                 </div>

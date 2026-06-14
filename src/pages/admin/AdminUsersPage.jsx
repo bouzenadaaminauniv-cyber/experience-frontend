@@ -39,7 +39,7 @@ export default function AdminUsersPage() {
     e.preventDefault()
     setSaving(true)
     try {
-      const res = await fetch(`http://localhost:3001/api/users/${profileUser.id}/profile`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${profileUser.id}/profile`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(profileForm)
@@ -104,7 +104,7 @@ export default function AdminUsersPage() {
         if (err) throw err
         // Update password if provided
         if (form.password) {
-          const res = await fetch(`http://localhost:3001/api/users/${editingUser.id}/password`, {
+          const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${editingUser.id}/password`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password: form.password })
@@ -113,7 +113,7 @@ export default function AdminUsersPage() {
           if (!res.ok) throw new Error(data.error || 'Erreur mot de passe')
         }
       } else {
-        const res = await fetch('http://localhost:3001/api/users', {
+        const res = await fetch('${import.meta.env.VITE_API_URL}/api/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form)
@@ -132,7 +132,7 @@ export default function AdminUsersPage() {
 
   async function handleDelete(user) {
     if (!confirm(`Supprimer ${user.name} ${user.surname} ?`)) return
-    const res = await fetch(`http://localhost:3001/api/users/${user.id}`, { method: 'DELETE' })
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${user.id}`, { method: 'DELETE' })
     if (res.ok) fetchUsers()
   }
 
@@ -245,7 +245,7 @@ export default function AdminUsersPage() {
                 <button type="submit" className="btn-primary" disabled={saving}>
                   {saving ? 'Enregistrement...' : 'Enregistrer'}
                 </button>
-               
+
               </div>
             </form>
           </div>
