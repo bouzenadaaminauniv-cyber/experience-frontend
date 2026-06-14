@@ -113,7 +113,7 @@ export default function AdminUsersPage() {
           if (!res.ok) throw new Error(data.error || 'Erreur mot de passe')
         }
       } else {
-        const res = await fetch('${import.meta.env.VITE_API_URL}/api/users', {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(form)
