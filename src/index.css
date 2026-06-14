@@ -1,0 +1,41 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; }
+
+/* Make main content responsive */
+.main-content {
+  margin-left: 240px;
+  flex: 1;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px !important;
+  }
+  .main-content {
+    margin-left: 200px !important;
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .sidebar {
+    width: 52px !important;
+  }
+  .sidebar .nav-item span:last-child,
+  .sidebar .nav-divider,
+  .sidebar .logo-main,
+  .sidebar .logo-sub,
+  .sidebar .user-name,
+  .sidebar .user-role {
+    display: none !important;
+  }
+  .sidebar-logo { padding: 14px 10px !important; }
+  .nav-item { justify-content: center; padding: 10px !important; }
+  .nav-icon { width: auto !important; }
+  .main-content {
+    margin-left: 52px !important;
+    padding: 12px !important;
+  }
+}

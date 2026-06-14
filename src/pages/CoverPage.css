@@ -1,0 +1,68 @@
+.personnel-title {
+  text-align: center;
+  padding: 24px 0 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+}
+
+.personnel-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.personnel-table td {
+  border: 1px solid #000;
+  padding: 10px 16px;
+  font-size: 10.5px;
+  vertical-align: middle;
+}
+
+.pers-label {
+  width: 200px;
+  text-align: right;
+  background: #fafafa;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.pers-value {
+  font-size: 12px;
+  min-height: 36px;
+  color: #0f172a;
+}
+.personnel-title {
+  text-align: center;
+  padding: 20px 0 14px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+}
+
+.personnel-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.personnel-table td {
+  border: 1px solid #000;
+  padding: 8px 14px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.pers-label {
+  width: 220px;
+  text-align: right;
+  background: #fafafa;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.pers-value {
+  font-size: 11px;
+  min-height: 32px;
+}
